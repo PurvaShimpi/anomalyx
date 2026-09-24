@@ -1,0 +1,6 @@
+{
+  "name": "AnomalyX - MPLADS Monitoring & Risk Detection",
+  "description": "AI-powered monitoring, anomaly detection, and risk-prioritization platform for MPLADS developmental works, fund utilization, and financial traceability.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

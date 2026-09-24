@@ -1,0 +1,273 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Global Dashboard White Text & Dark Theme Enforcement */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #020617;
+  color: #ffffff;
+}
+
+/* White text rules across every dashboard, modal, and container */
+.dark,
+.dark *,
+.dashboard-container,
+.dashboard-container *,
+.dashboard-container h1,
+.dashboard-container h2,
+.dashboard-container h3,
+.dashboard-container h4,
+.dashboard-container h5,
+.dashboard-container h6 {
+  color: #ffffff;
+}
+
+/* Specific text overrides to guarantee white text on every dashboard element */
+.dashboard-container .text-slate-900,
+.dashboard-container .text-slate-800,
+.dashboard-container .text-slate-700,
+.dashboard-container [class*="text-slate-9"],
+.dashboard-container [class*="text-slate-8"],
+.dashboard-container [class*="text-slate-7"],
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark [class*="text-slate-9"],
+.dark [class*="text-slate-8"],
+.dark [class*="text-slate-7"] {
+  color: #ffffff !important;
+}
+
+.dashboard-container .text-slate-600,
+.dashboard-container .text-slate-500,
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #f1f5f9 !important; /* ultra-bright crisp white-slate */
+}
+
+.dashboard-container .text-slate-400,
+.dark .text-slate-400 {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+.dashboard-container .text-slate-300,
+.dark .text-slate-300 {
+  color: #f8fafc !important;
+}
+
+/* Surfaces and cards in dashboards and modals */
+.dashboard-container .bg-white,
+.dark .bg-white {
+  background-color: #0f172a !important; /* slate-900 */
+  border-color: #1e293b !important;
+}
+
+.dashboard-container .bg-slate-50,
+.dashboard-container .bg-slate-50\/50,
+.dashboard-container .bg-slate-50\/60,
+.dashboard-container .bg-slate-50\/80,
+.dashboard-container .bg-slate-50\/90,
+.dashboard-container .bg-slate-100,
+.dark .bg-slate-50,
+.dark .bg-slate-50\/50,
+.dark .bg-slate-50\/60,
+.dark .bg-slate-50\/80,
+.dark .bg-slate-50\/90,
+.dark .bg-slate-100 {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #334155 !important;
+}
+
+.dashboard-container .border-slate-100,
+.dashboard-container .border-slate-200,
+.dark .border-slate-100,
+.dark .border-slate-200 {
+  border-color: #1e293b !important;
+}
+
+.dashboard-container .border-slate-300,
+.dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+
+.dashboard-container .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+.dashboard-container .divide-slate-200 > :not([hidden]) ~ :not([hidden]),
+.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1e293b !important;
+}
+
+/* Tables in Dashboards */
+.dashboard-container table,
+.dark table {
+  color: #ffffff !important;
+}
+
+.dashboard-container table th,
+.dark table th {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+}
+
+.dashboard-container table td,
+.dark table td {
+  color: #ffffff !important;
+  border-color: #1e293b !important;
+}
+
+.dashboard-container table tr:hover td,
+.dark table tr:hover td {
+  background-color: #1e293b !important;
+}
+
+/* Form controls & filters in Dashboards */
+.dashboard-container input,
+.dashboard-container select,
+.dashboard-container textarea,
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark select,
+.dark textarea {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+}
+
+.dashboard-container input::placeholder,
+.dashboard-container textarea::placeholder,
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Modals and dialog overlays */
+.dark [role="dialog"],
+.dark .modal-content,
+.dark .fixed.inset-0 > div {
+  color: #ffffff !important;
+}
+
+/* Badge highlights on dark surfaces */
+.dashboard-container .bg-emerald-50,
+.dashboard-container .bg-emerald-100,
+.dark .bg-emerald-50,
+.dark .bg-emerald-100 {
+  background-color: rgba(6, 78, 59, 0.6) !important;
+  color: #a7f3d0 !important;
+  border-color: #065f46 !important;
+}
+
+.dashboard-container .bg-rose-50,
+.dashboard-container .bg-rose-100,
+.dark .bg-rose-50,
+.dark .bg-rose-100 {
+  background-color: rgba(136, 19, 55, 0.6) !important;
+  color: #fecdd3 !important;
+  border-color: #9f1239 !important;
+}
+
+.dashboard-container .bg-amber-50,
+.dashboard-container .bg-amber-100,
+.dark .bg-amber-50,
+.dark .bg-amber-100 {
+  background-color: rgba(120, 53, 15, 0.6) !important;
+  color: #fde68a !important;
+  border-color: #92400e !important;
+}
+
+.dashboard-container .bg-blue-50,
+.dashboard-container .bg-blue-100,
+.dark .bg-blue-50,
+.dark .bg-blue-100 {
+  background-color: rgba(30, 58, 138, 0.6) !important;
+  color: #bfdbfe !important;
+  border-color: #1e40af !important;
+}
+
+.dashboard-container .bg-purple-50,
+.dashboard-container .bg-purple-100,
+.dark .bg-purple-50,
+.dark .bg-purple-100 {
+  background-color: rgba(88, 28, 135, 0.6) !important;
+  color: #e9d5ff !important;
+  border-color: #6b21a8 !important;
+}
+
+/* ==========================================================================
+   POP-UP MESSAGES TEXT COLORS
+   Distinct vivid text colors for toasts, notifications, and alert popups
+   ========================================================================== */
+
+/* SUCCESS POP-UP MESSAGES (Emerald Mint & Seafoam text) */
+#toast-container .toast-popup-success .toast-title,
+.toast-popup-success .toast-title,
+.pop-up-success .toast-title,
+.pop-up-message-success h4,
+.pop-up-message-success strong {
+  color: #34d399 !important; /* Vivid mint emerald */
+}
+
+#toast-container .toast-popup-success .toast-desc,
+.toast-popup-success .toast-desc,
+.pop-up-success .toast-desc,
+.pop-up-message-success p,
+.pop-up-message-success span:not([class*="badge"]) {
+  color: #a7f3d0 !important; /* Soft luminous seafoam mint */
+}
+
+/* ERROR / ALERT POP-UP MESSAGES (Coral Rose & Peach-pink text) */
+#toast-container .toast-popup-error .toast-title,
+.toast-popup-error .toast-title,
+.pop-up-error .toast-title,
+.pop-up-message-error h4,
+.pop-up-message-error strong {
+  color: #fb7185 !important; /* Vivid coral rose */
+}
+
+#toast-container .toast-popup-error .toast-desc,
+.toast-popup-error .toast-desc,
+.pop-up-error .toast-desc,
+.pop-up-message-error p,
+.pop-up-message-error span:not([class*="badge"]) {
+  color: #fecdd3 !important; /* Soft pastel rose cream */
+}
+
+/* WARNING POP-UP MESSAGES (Radiant Amber Gold & Honey text) */
+#toast-container .toast-popup-warning .toast-title,
+.toast-popup-warning .toast-title,
+.pop-up-warning .toast-title,
+.pop-up-message-warning h4,
+.pop-up-message-warning strong {
+  color: #fbbf24 !important; /* Radiant golden amber */
+}
+
+#toast-container .toast-popup-warning .toast-desc,
+.toast-popup-warning .toast-desc,
+.pop-up-warning .toast-desc,
+.pop-up-message-warning p,
+.pop-up-message-warning span:not([class*="badge"]) {
+  color: #fde68a !important; /* Warm golden butter honey */
+}
+
+/* INFO / NOTICE POP-UP MESSAGES (Electric Cyan & Ice Blue text) */
+#toast-container .toast-popup-info .toast-title,
+.toast-popup-info .toast-title,
+.pop-up-info .toast-title,
+.pop-up-message-info h4,
+.pop-up-message-info strong {
+  color: #38bdf8 !important; /* Electric cyan sky */
+}
+
+#toast-container .toast-popup-info .toast-desc,
+.toast-popup-info .toast-desc,
+.pop-up-info .toast-desc,
+.pop-up-message-info p,
+.pop-up-message-info span:not([class*="badge"]) {
+  color: #bae6fd !important; /* Bright crisp ice cyan */
+}
+
+
